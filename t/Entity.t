@@ -34,4 +34,14 @@ subtest 'invalid param' => sub {
 	::dies_ok { $entity->to_number };
 };
 
+subtest 'empty param' => sub {
+	my $entity = new Entity();
+
+	::ok( !$entity->is_number );
+	::ok( !$entity->is_string );
+
+	::dies_ok { $entity->to_string };
+	::dies_ok { $entity->to_number };
+};
+
 done_testing;
