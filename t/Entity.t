@@ -15,7 +15,7 @@ subtest 'string to number' => sub {
 	::is( $entity->to_number, 2757, 'to number' );
 };
 
-subtest 'mber to string' => sub {
+subtest 'number to string' => sub {
 	my $entity = new Entity({ value => 2757 });
 
 	::ok( $entity->is_number, 'is number' );
